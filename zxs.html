@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>İyi ki Doğdun Defne!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      font-family: 'Comic Sans MS', cursive;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .photo-container {
+      width: 100%;
+      max-width: 400px;
+      margin-top: 20px;
+    }
+
+    .photo-container img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-top: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    p {
+      font-size: 1.4rem;
+      margin: 15px 20px;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    button {
+      margin: 20px;
+      padding: 12px 25px;
+      font-size: 1.1rem;
+      background-color: #ff6f91;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      animation: fadeIn 4s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #ff4e7a;
+    }
+
+    .balloons {
+      position: absolute;
+      top: -100px;
+      width: 100%;
+      font-size: 2.5rem;
+      pointer-events: none;
+      animation: fall 10s linear infinite;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(120vh); }
+    }
+  </style>
+</head>
+<body>
+  <div class="balloons">🎈🎈🎈🎈🎈🎈</div>
+
+  <div class="photo-container">
+    <img src="a655d21f-9c5d-46d3-ad93-4c8269b83dbd.jpg" alt="Defne">
+  </div>
+
+  <h1>İyi ki Doğdun Defne!</h1>
+  <p>Doğum günün kutlu olsun tatlı ve hırçın kızım 💖</p>
+  <button onclick="playMusic()">Kutlama Başlasın 🎉</button>
+
+  <audio id="bg-music" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+
+  <script>
+    function playMusic() {
+      document.getElementById("bg-music").play();
+      alert("DOĞUM GÜNÜN KUTLU OLSUN DEFNOSUM 🎂");
+    }
+  </script>
+</body>
+</html>
